@@ -6,7 +6,6 @@ package goobj
 
 import "loov.dev/lensm/internal/go/buildcfg"
 
-// Builtin (compiler-generated) function references appear
 // frequently. We assign special indices for them, so they
 // don't need to be referenced by name.
 
@@ -22,7 +21,6 @@ func BuiltinName(i int) (string, int) {
 	return builtins[i].name, builtins[i].abi
 }
 
-// BuiltinIdx returns the index of the builtin with the
 // given name and abi, or -1 if it is not a builtin.
 func BuiltinIdx(name string, abi int) int {
 	i, ok := builtinMap[name]
